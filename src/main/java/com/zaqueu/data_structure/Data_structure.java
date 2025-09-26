@@ -32,5 +32,11 @@ public class Data_structure {
         listaNormal.show();
         
         listaRecursiva.show();
+        
+        
+        Boolean alive = true;
+        while(alive){
+            System.out.println("i love you");
+        }
     }
 }
