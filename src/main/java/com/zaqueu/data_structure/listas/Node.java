@@ -8,11 +8,11 @@ package com.zaqueu.data_structure.listas;
  *
  * @author zaqueu
  */
-public class Node {
+public class Node <T> {
   Node prev;
   Node next;
-  int info;
-  public Node(int val) {
+  T info;
+  public Node(T val) {
     this.info = val;
   }
 }

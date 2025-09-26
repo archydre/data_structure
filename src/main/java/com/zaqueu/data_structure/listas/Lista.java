@@ -8,9 +8,9 @@ package com.zaqueu.data_structure.listas;
  *
  * @author zaqueu
  */
-public class Lista {
-  Node inicio; 
-  Node fim;
+public class Lista<T> {
+  Node<T> inicio; 
+  Node<T> fim;
   int size;
   public Lista() {
     inicio = null;
@@ -19,8 +19,8 @@ public class Lista {
   }
 
 
-  public void add(int val) {
-    Node novo = new Node(val);
+  public void add(T val) {
+    Node<T> novo = new Node(val);
     if (inicio == null) {
       inicio = novo;
       fim = novo;
@@ -32,10 +32,10 @@ public class Lista {
     size++;
   }
 
-  public void remove(int val){
-    Node item = inicio;
+  public void remove(T val){
+    Node<T> item = inicio;
     while(item != null){
-      if(item.info == val){
+      if(item.info.equals(val)){
         if(item.prev != null){
           item.prev.next = item.next;
           item.next.prev = item.prev;
@@ -53,7 +53,7 @@ public class Lista {
   }
 
   public void show(){
-    Node item = inicio;
+    Node<T> item = inicio;
     while(item != null){
       System.out.print(item.info + " ");
       item = item.next;
@@ -63,7 +63,7 @@ public class Lista {
   }
 
   public static void main(String[] args) {
-      Lista list = new Lista();
+      Lista<Integer> list = new Lista<>();
       list.add(42);
       list.add(53);
       list.add(74);

@@ -8,7 +8,7 @@ package com.zaqueu.data_structure.listas;
  *
  * @author zaqueu
  */
-public class ListaRecursiva extends Lista{
+public class ListaRecursiva<T> extends Lista<T>{
     
     @Override
     public void show() {
@@ -16,12 +16,34 @@ public class ListaRecursiva extends Lista{
         System.out.println(); // Pula uma linha no final
     }
     
-    public void showRecursivo(Node atual){
+    private void showRecursivo(Node<T> atual){
         if(atual == null){
             return;
         }else{
             System.out.print(atual.info + " ");
             showRecursivo(atual.next);
+        }
+    }
+    
+    public void search(T val){
+        int found = searchRecursivo(inicio ,val);
+        
+        if(found == 1){
+            System.out.println("elemento existe na lista");
+        }else{
+            System.out.println("elemento NAO existe na lista");
+        }
+    }
+    
+    private int searchRecursivo(Node<T> atual, T value){
+        if(atual != null){
+            if(value.equals(atual.info)){
+                return 1;
+            }else{
+                return searchRecursivo(atual.next, value);
+            }
+        }else{
+            return 0;
         }
     }
 }

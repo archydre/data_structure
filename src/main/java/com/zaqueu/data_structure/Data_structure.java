@@ -33,10 +33,9 @@ public class Data_structure {
         
         listaRecursiva.show();
         
+        listaRecursiva.search(12);
+        listaRecursiva.search(13);
         
-        Boolean alive = true;
-        while(alive){
-            System.out.println("i love you");
-        }
+        
     }
 }
