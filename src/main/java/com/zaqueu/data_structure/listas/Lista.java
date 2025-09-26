@@ -17,6 +17,10 @@ public class Lista<T> {
     fim = null;
     size = 0;
   }
+  
+  public int getSize(){
+      return this.size;
+  }
 
 
   public void add(T val) {
@@ -59,7 +63,7 @@ public class Lista<T> {
       item = item.next;
     }
 
-    System.out.println();
+    System.out.println("-- " + this.size + " itens");
   }
 
   public static void main(String[] args) {

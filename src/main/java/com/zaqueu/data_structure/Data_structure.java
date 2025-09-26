@@ -34,7 +34,13 @@ public class Data_structure {
         listaRecursiva.show();
         
         listaRecursiva.search(12);
+        System.out.println("");
         listaRecursiva.search(13);
+        
+        listaRecursiva.remove(12);
+        System.out.println("");
+        
+        listaRecursiva.show();
         
         
     }
