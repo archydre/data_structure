@@ -5,7 +5,7 @@
 package com.zaqueu.data_structure.listas;
 
 /**
- *
+ *  questao a4
  * @author zaqueu
  */
 public class ListaRecursiva<T> extends Lista<T>{
